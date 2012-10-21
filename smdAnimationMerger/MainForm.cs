@@ -47,14 +47,20 @@ namespace smdAnimationMerger
             else
             {
                 SmdParser parser = new SmdParser(lbFiles.Items.Cast<String>().ToArray(), txtOutPath.Text);
-               // try
-               // {
+                bool success = true;
+                try
+                {
                     parser.doParse();
-               // }
-               // catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message, "Something bad happened", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               // }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Something bad happened", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    success = false;
+                }
+                if (success)
+                {
+                    MessageBox.Show("Done");
+                }
             }
         }
 

@@ -7,7 +7,7 @@
 	bone animations into a single file	 
 
 The SMD file format is the format valve uses for it's source games.
-It stores, bones, animation, and mesh data. 
+It stores bone, animation, and mesh data. 
 
 This application allows the selection of multi-file
 animations in the *.smd file format and merge them into
